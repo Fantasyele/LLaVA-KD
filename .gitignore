@@ -1,3 +1,4 @@
-pretrained_hg/
+pretrained_hg
 pretrained_ckpt/
-eval_dataset/
+eval_dataset
+bitsandbytes
