@@ -25,6 +25,7 @@
 </div>
 
 ## Abstract
+
 The success of Large Language Models (LLMs) has inspired the development of Multimodal Large Language Models (MLLMs) for unified understanding of vision and language. However, the increasing model size and computational complexity of large-scale MLLMs ($l$-MLLMs) limit their use in resource-constrained scenarios. Although small-scale MLLMs ($s$-MLLMs) are designed to reduce computational costs, they typically suffer from performance degradation. To mitigate this limitation, we propose a novel LLaVA-KD framework to transfer knowledge from $l$-MLLMs to $s$-MLLMs. Specifically, we introduce Multimodal Distillation (MDist) to transfer teacher model's robust representations across both visual and linguistic modalities, and Relation Distillation (RDist) to transfer teacher model's ability to capture visual token relationships. Additionally, we propose a three-stage training scheme to fully exploit the potential of the proposed distillation strategy: (1) Distilled Pre-Training to strengthen the alignment between visual-linguistic representations in $s$-MLLMs, (2) Supervised Fine-Tuning to equip the $s$-MLLMs with multimodal understanding capacity, and (3) Distilled Fine-Tuning to refine $s$-MLLM's knowledge. Our approach significantly improves $s$-MLLMs performance without altering the model architecture. Extensive experiments and ablation studies validate the effectiveness of each proposed component.
 ---
 
