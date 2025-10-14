@@ -83,7 +83,6 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
 ## LLaVA-KD Weights
 | Model                                                   | Vision Encoder                                               | LLM                                                           |  CKPTs
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------  | ------------------------------------------------------------  |
-<<<<<<< HEAD
 | LLaVA-KD-1B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-0.5B](https://huggingface.co/Qwen/Qwen1.5-0.5B)     | [LLaVA-KD-Base-siglip-Qwen1.5-0.5B]()
 | LLaVA-KD-2B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-1.8B](https://huggingface.co/Qwen/Qwen1.5-1.8B)     | [LLaVA-KD-Base-siglip-Qwen1.5-1.8B]()
 | LLaVA-KD-1B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B)     | [LLaVA-KD-Base-siglip-Qwen2.5-0.5B]()
@@ -98,22 +97,13 @@ Download the Pre-trained VisualEnc, LLM, LLaVAKD weights to the `./pretrained_ck
   python quick_inference.py --model_path ./pretrained_ckpt/LLaVAKD_Model_Path --image_file ./image_test/img_test_1.jpg  --query "What is that orange thing behind the girl?"
   ```
 <p align="center">
-<<<<<<< HEAD
   <img src="assets/Visual.jpg" alt="accuracy" width="100%">
-=======
-  <img src="assets/Visual.png" alt="accuracy" width="100%">
->>>>>>> origin/main
 </p>
 
 
 ## :ballot_box_with_check: TODO List
-<<<<<<< HEAD
 - [x] Release the training code
 - [x] Release the checkpoints
-=======
-- [ ] Release the training code
-- [ ] Release the checkpoints
->>>>>>> origin/main
 
 ## :dizzy: Citation
 If you find this code useful, don't forget to star the repo and cite the paper.
