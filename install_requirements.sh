@@ -4,7 +4,6 @@ python3 -m pip install --no-cache-dir --upgrade -r requirements.txt
 python3 -m pip install numpy==1.26.2
 python3 -m pip install urllib3==1.26.6
 
-<<<<<<< HEAD
 # install cuda-12.6
 cd ../LLaVA_KD_whls/
 sh cuda_12.9.1_575.57.08_linux.run
@@ -20,17 +19,3 @@ pip install deepspeed==0.14.4
 # rpm -i cusparselt-local-repo-rhel9-0.7.1-1.0-1.x86_64.rpm
 # dnf clean all
 # dnf -y install libcusparselt0 libcusparselt-devel
-=======
-echo "Installing flash-attention..."
-cd ../flash-attention
-python3 -m pip install wheel==0.41.3
-python3 setup.py install
-
-echo "Installation completed!"
-
-cd ../LLaVA_KD/bitsandbytes
-pip install -e .
-cd ..
-pip install ptflops
-pip install deepspeed==0.14.4
->>>>>>> origin/main

@@ -5,7 +5,6 @@ from .formatter import EmptyFormatter, StringFormatter
 from .base import Template
 from .formatter import Formatter
 from . import register_template
-
 from transformers import PreTrainedTokenizer
 import torch
     

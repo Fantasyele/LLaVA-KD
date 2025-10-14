@@ -23,11 +23,7 @@ fastapi
 einops==0.6.1
 einops-exts==0.0.4
 timm==0.6.13
-<<<<<<< HEAD
 # deepspeed==0.14.0
-=======
-deepspeed==0.14.0
->>>>>>> origin/main
 open_clip_torch
 ninja
 wandb

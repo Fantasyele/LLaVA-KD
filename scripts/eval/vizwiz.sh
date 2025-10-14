@@ -2,15 +2,9 @@
 
 MODEL_PATH=$1
 MODEL_NAME=$2
-<<<<<<< HEAD
 EVAL_DIR="./eval_dataset/eval"
 
 python3.12 -m llavakd.eval.model_vqa_loader \
-=======
-EVAL_DIR="./eval_dataset"
-
-python -m llavakd.eval.model_vqa_loader \
->>>>>>> origin/main
     --model-path $MODEL_PATH \
     --question-file $EVAL_DIR/vizwiz/llava_test.jsonl \
     --image-folder $EVAL_DIR/vizwiz/test \
@@ -18,11 +12,7 @@ python -m llavakd.eval.model_vqa_loader \
     --temperature 0 \
     --conv-mode phi
 
-<<<<<<< HEAD
 python3.12 scripts/convert_vizwiz_for_submission.py \
-=======
-python scripts/convert_vizwiz_for_submission.py \
->>>>>>> origin/main
     --annotation-file $EVAL_DIR/vizwiz/llava_test.jsonl \
     --result-file $EVAL_DIR/vizwiz/answers/$MODEL_NAME.jsonl \
     --result-upload-file $EVAL_DIR/vizwiz/answers_upload/$MODEL_NAME.json

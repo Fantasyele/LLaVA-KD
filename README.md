@@ -46,7 +46,6 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
 
 ## 🛠️ Installation
 
-<<<<<<< HEAD
 - Based on python3.12 and torch-2.6.0
 
 - Prepare the environment
@@ -55,28 +54,6 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
   python3.12 -m pip install numpy==1.26.2
   python3.12 -m pip install urllib3==1.26.6
   ```
-<!-- - Install Flash Attention
-=======
-- Install torch and torchvision
-  ```shell
-  pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cu118
-  ```
-- Prepare the environment
-  ```shell
-  python3 -m pip install --no-cache-dir --upgrade -r requirements.txt
-  python3 -m pip install numpy==1.26.2
-  python3 -m pip install urllib3==1.26.6
-  pip install ptflops
-  ```
-- Install Flash Attention
->>>>>>> origin/main
-  ```shell
-  git clone https://github.com/Dao-AILab/flash-attention.git
-  cd ./flash-attention
-  python3 -m pip install wheel==0.41.3
-  python3 setup.py install
-<<<<<<< HEAD
-  ``` -->
 
 - Install cuda12.6
   ```shell
@@ -101,15 +78,7 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
   ```shell
   python3.12 -m pip install ptflops
   python3.12 -m pip install deepspeed==0.14.4
-=======
-  ```
-- Install bitsandbytes
-  ```shell
-  git clone https://github.com/bitsandbytes-foundation/bitsandbytes.git
-  cd ./bitsandbytes
-  pip install -e .
->>>>>>> origin/main
-  ```
+
 
 ## LLaVA-KD Weights
 | Model                                                   | Vision Encoder                                               | LLM                                                           |  CKPTs
@@ -119,11 +88,6 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
 | LLaVA-KD-2B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-1.8B](https://huggingface.co/Qwen/Qwen1.5-1.8B)     | [LLaVA-KD-Base-siglip-Qwen1.5-1.8B]()
 | LLaVA-KD-1B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B)     | [LLaVA-KD-Base-siglip-Qwen2.5-0.5B]()
 | LLaVA-KD-2B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen2.5-1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B)     | [LLaVA-KD-Base-siglip-Qwen2.5-1.5B]()
-=======
-| LLaVA-KD-1B | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-0.5B](https://huggingface.co/Qwen/Qwen1.5-0.5B)     | [LLaVA-KD-Base-siglip-Qwen1.5-0.5B](https://drive.google.com/file/d/1eoGzu3kKG4qB2Y2nxJ5axVO7uJNP3CJU/view?usp=drive_link)
-| LLaVA-KD-2B | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-1.8B](https://huggingface.co/Qwen/Qwen1.5-1.8B)     | [LLaVA-KD-Base-siglip-Qwen1.5-1.8B](https://drive.google.com/file/d/1T9K0aoS9bgzkC1taRplNT_QglpbfrdbC/view?usp=drive_link)
-
->>>>>>> origin/main
 
 ## :computer: Evaluation
 Please evaluate the model according to [Evaluation.md](docs/Evaluation.md).
