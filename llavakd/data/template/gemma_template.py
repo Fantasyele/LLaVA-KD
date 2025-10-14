@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from dataclasses import dataclass,field
+=======
+from dataclasses import dataclass
+>>>>>>> origin/main
 from typing import TYPE_CHECKING, Dict, List, Optional, Sequence, Tuple, Union
 from packaging import version
 
@@ -17,6 +21,7 @@ system = "A chat between a curious user and an artificial intelligence assistant
 @register_template('gemma')
 @dataclass
 class GemmaTemplate(Template):
+<<<<<<< HEAD
     format_image_token: "Formatter" = field(default_factory=lambda: StringFormatter(slot="<image>\n{{content}}"))
     format_user: "Formatter" = field(default_factory=lambda:StringFormatter(slot="USER" + ": " + "{{content}}" + " "))
     format_assistant: "Formatter" = field(default_factory=lambda:StringFormatter(slot="ASSISTANT" + ": " + "{{content}}" + "<eos>"))
@@ -24,6 +29,13 @@ class GemmaTemplate(Template):
     separator: "Formatter" = field(default_factory=lambda:EmptyFormatter(slot=[' ASSISTANT: ', '<eos>']))
     
     
+=======
+    format_image_token: "Formatter" = StringFormatter(slot="<image>\n{{content}}")
+    format_user: "Formatter" = StringFormatter(slot="USER" + ": " + "{{content}}" + " ")
+    format_assistant: "Formatter" = StringFormatter(slot="ASSISTANT" + ": " + "{{content}}" + "<eos>")
+    system: "Formatter" = EmptyFormatter(slot=system+" ")
+    separator: "Formatter" = EmptyFormatter(slot=[' ASSISTANT: ', '<eos>'])
+>>>>>>> origin/main
 
     def _make_masks(self, labels, tokenizer, sep, eos_token_length, rounds):
         cur_len = 1 # bos

@@ -78,7 +78,10 @@ class TrainingArguments(transformers.TrainingArguments):
     lora_dropout: float = 0.05
     lora_weight_path: str = ""
     lora_bias: str = "none"
+<<<<<<< HEAD
     seed: int = 1234
+=======
+>>>>>>> origin/main
     mm_projector_lr: Optional[float] = None
     group_by_modality_length: bool = field(default=False)
     vision_tower_lr: Optional[float] = None

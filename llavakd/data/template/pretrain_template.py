@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from dataclasses import dataclass,field
+=======
+from dataclasses import dataclass
+>>>>>>> origin/main
 from typing import TYPE_CHECKING, Dict, List, Optional, Sequence, Tuple, Union
 import copy
 
@@ -16,6 +20,7 @@ import torch
 @register_template('pretrain')
 @dataclass
 class PretrainTemplate(Template):
+<<<<<<< HEAD
     # format_image_token: "Formatter" = EmptyFormatter(slot="")
     # format_user: "Formatter" = EmptyFormatter(slot="<image>")
     # format_assistant: "Formatter" = StringFormatter(slot="{{content}}\n")
@@ -28,6 +33,14 @@ class PretrainTemplate(Template):
     system: "Formatter" = field(default_factory=lambda: EmptyFormatter(slot=""))
     separator: "Formatter" = field(default_factory=lambda: EmptyFormatter(slot=['', '']))
 
+=======
+    format_image_token: "Formatter" = EmptyFormatter(slot="")
+    format_user: "Formatter" = EmptyFormatter(slot="<image>")
+    format_assistant: "Formatter" = StringFormatter(slot="{{content}}\n")
+    system: "Formatter" = EmptyFormatter(slot="")
+    separator: "Formatter" = EmptyFormatter(slot=['', ''])
+    
+>>>>>>> origin/main
     def make_labels(self, input_ids, prompt, tokenizer):
         labels = copy.deepcopy(input_ids)
         mask_len = len(self.tokenizer_image_token("<image>", tokenizer))

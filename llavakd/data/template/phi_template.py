@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from dataclasses import dataclass,field
+=======
+from dataclasses import dataclass
+>>>>>>> origin/main
 from typing import TYPE_CHECKING, Dict, List, Optional, Sequence, Tuple, Union
 
 from .formatter import EmptyFormatter, StringFormatter
@@ -14,11 +18,19 @@ system = "A chat between a curious user and an artificial intelligence assistant
 @register_template('phi')
 @dataclass
 class PhiTemplate(Template):
+<<<<<<< HEAD
     format_image_token: "Formatter" = field(default_factory=lambda:StringFormatter(slot="<image>\n{{content}}"))
     format_user: "Formatter" = field(default_factory=lambda:StringFormatter(slot="USER" + ": " + "{{content}}" + " "))
     format_assistant: "Formatter" = field(default_factory=lambda:StringFormatter(slot="ASSISTANT" + ": " + "{{content}}" + "<|endoftext|>"))
     system: "Formatter" = field(default_factory=lambda:EmptyFormatter(slot=system+" "))
     separator: "Formatter" = field(default_factory=lambda:EmptyFormatter(slot=[' ASSISTANT: ', '<|endoftext|>']))
+=======
+    format_image_token: "Formatter" = StringFormatter(slot="<image>\n{{content}}")
+    format_user: "Formatter" = StringFormatter(slot="USER" + ": " + "{{content}}" + " ")
+    format_assistant: "Formatter" = StringFormatter(slot="ASSISTANT" + ": " + "{{content}}" + "<|endoftext|>")
+    system: "Formatter" = EmptyFormatter(slot=system+" ")
+    separator: "Formatter" = EmptyFormatter(slot=[' ASSISTANT: ', '<|endoftext|>'])
+>>>>>>> origin/main
 
 
 

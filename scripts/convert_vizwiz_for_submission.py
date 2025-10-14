@@ -2,7 +2,10 @@ import os
 import argparse
 import json
 import sys
+<<<<<<< HEAD
 sys.path.append('/mnt/data/LLaVA_KD/LLaVA_KD')
+=======
+>>>>>>> origin/main
 from llavakd.eval.m4c_evaluator import EvalAIAnswerProcessor
 
 

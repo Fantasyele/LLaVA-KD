@@ -10,10 +10,17 @@ SPLIT="llava_vqav2_mscoco_test-dev2015"
 
 MODEL_PATH=$1
 MODEL_NAME=$2
+<<<<<<< HEAD
 EVAL_DIR="./eval_dataset/eval"
 
 for IDX in $(seq 0 $((CHUNKS-1))); do
     CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python3.12 -m llavakd.eval.model_vqa_loader \
+=======
+EVAL_DIR="./eval_dataset"
+
+for IDX in $(seq 0 $((CHUNKS-1))); do
+    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m llavakd.eval.model_vqa_loader \
+>>>>>>> origin/main
         --model-path $MODEL_PATH \
         --question-file $EVAL_DIR/vqav2/$SPLIT.jsonl \
         --image-folder $EVAL_DIR/vqav2/test2015 \
@@ -36,4 +43,8 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     cat $EVAL_DIR/vqav2/answers/$SPLIT/$MODEL_NAME/${CHUNKS}_${IDX}.jsonl >> "$output_file"
 done
 
+<<<<<<< HEAD
 python3.12 scripts/convert_vqav2_for_submission.py --split $SPLIT --ckpt $MODEL_NAME --dir $EVAL_DIR/vqav2
+=======
+python scripts/convert_vqav2_for_submission.py --split $SPLIT --ckpt $MODEL_NAME --dir $EVAL_DIR/vqav2
+>>>>>>> origin/main

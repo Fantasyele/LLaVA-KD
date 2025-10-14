@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 export LD_LIBRARY_PATH=/usr/local/lib/python3.12/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.6/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/python3.12/site-packages/nvidia/nccl/lib
@@ -12,6 +13,18 @@ MODEL_NAME="Qwen25_05B_DFT_250918"
 # CUDA_VISIBLE_DEVICES=2 bash scripts/eval/pope.sh "$MODEL_PATH" "$MODEL_NAME" &
 # CUDA_VISIBLE_DEVICES=3 bash scripts/eval/mme.sh "$MODEL_PATH" "$MODEL_NAME" &
 # CUDA_VISIBLE_DEVICES=4 bash scripts/eval/mmmu.sh "$MODEL_PATH" "$MODEL_NAME" &
+=======
+
+MODEL_PATH="Your_Model_Path"
+MODEL_NAME="Model_Name"
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 bash scripts/eval/gqa.sh "$MODEL_PATH" "$MODEL_NAME" &
+CUDA_VISIBLE_DEVICES=0 bash scripts/eval/sqa.sh "$MODEL_PATH" "$MODEL_NAME" &
+CUDA_VISIBLE_DEVICES=1 bash scripts/eval/textvqa.sh "$MODEL_PATH" "$MODEL_NAME" &
+CUDA_VISIBLE_DEVICES=2 bash scripts/eval/pope.sh "$MODEL_PATH" "$MODEL_NAME" &
+CUDA_VISIBLE_DEVICES=3 bash scripts/eval/mme.sh "$MODEL_PATH" "$MODEL_NAME" &
+CUDA_VISIBLE_DEVICES=4 bash scripts/eval/mmmu.sh "$MODEL_PATH" "$MODEL_NAME" &
+>>>>>>> origin/main
 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 bash scripts/eval/vqav2.sh "$MODEL_PATH" "$MODEL_NAME" &
 CUDA_VISIBLE_DEVICES=6 bash scripts/eval/vizwiz.sh "$MODEL_PATH" "$MODEL_NAME" &
