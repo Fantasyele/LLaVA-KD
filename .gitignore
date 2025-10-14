@@ -1,4 +1,9 @@
-pretrained_hg
-pretrained_ckpt/
-eval_dataset
-bitsandbytes
+﻿__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.env
+.vscode/
+.idea/
+.DS_Store
