@@ -24,6 +24,37 @@
 
 </div>
 
+## Why this repo is worth sharing on X
+
+- **Compresses multimodal reasoning into smaller models** without changing the base architecture.
+- **Combines representation distillation and relation distillation** instead of relying on a single imitation signal.
+- **Presents a practical 3-stage training recipe** for building stronger small MLLMs.
+- **Targets the real deployment gap** between large multimodal models and resource-constrained use cases.
+
+## TL;DR
+
+> LLaVA-KD is a knowledge distillation framework for multimodal LLMs that helps small models inherit more of the visual-language capability of larger teachers through multimodal feature transfer, relation transfer, and staged training.
+
+## Suggested X / Twitter post
+
+```text
+Small multimodal models are cheap to run, but they usually lose too much capability.
+
+LLaVA-KD tackles that gap with:
+- multimodal distillation
+- relation distillation
+- a 3-stage training recipe
+
+A useful repo if you're working on efficient VLM / MLLM deployment.
+https://github.com/Fantasyele/LLaVA-KD
+```
+
+## Quick links
+
+- **Paper**: https://arxiv.org/pdf/2410.16236
+- **Evaluation guide**: [docs/Evaluation.md](docs/Evaluation.md)
+- **Quick inference**: [quick_inference.py](quick_inference.py)
+
 ## Abstract
 
 The success of Large Language Models (LLMs) has inspired the development of Multimodal Large Language Models (MLLMs) for unified understanding of vision and language. However, the increasing model size and computational complexity of large-scale MLLMs ($l$-MLLMs) limit their use in resource-constrained scenarios. Although small-scale MLLMs ($s$-MLLMs) are designed to reduce computational costs, they typically suffer from performance degradation. To mitigate this limitation, we propose a novel LLaVA-KD framework to transfer knowledge from $l$-MLLMs to $s$-MLLMs. Specifically, we introduce Multimodal Distillation (MDist) to transfer teacher model's robust representations across both visual and linguistic modalities, and Relation Distillation (RDist) to transfer teacher model's ability to capture visual token relationships. Additionally, we propose a three-stage training scheme to fully exploit the potential of the proposed distillation strategy: (1) Distilled Pre-Training to strengthen the alignment between visual-linguistic representations in $s$-MLLMs, (2) Supervised Fine-Tuning to equip the $s$-MLLMs with multimodal understanding capacity, and (3) Distilled Fine-Tuning to refine $s$-MLLM's knowledge. Our approach significantly improves $s$-MLLMs performance without altering the model architecture. Extensive experiments and ablation studies validate the effectiveness of each proposed component.
@@ -38,8 +69,8 @@ The success of Large Language Models (LLMs) has inspired the development of Mult
 ---
 
 ## 📜 Main Results on 10 Popular Benchmarks
-Benchmarked results with SoTA MLLMs.  Compared with counterparts, our \method~achieves highly competitive results than current small-scale MLLM models. 
-AVG: The average of the nine benchmarks for comprehensive comparison except MMMU. $^\dagger$: reproduced results using the official code.
+Benchmarked results against representative MLLMs. Compared with similarly sized counterparts, LLaVA-KD achieves highly competitive performance among current small-scale multimodal models.
+AVG denotes the average over nine benchmarks for comprehensive comparison, excluding MMMU. $^\dagger$ marks results reproduced from official code.
 ![comparison_llavakd](assets/results.png)
 
 ---
@@ -55,9 +86,10 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
   python3.12 -m pip install urllib3==1.26.6
   ```
 
-- Install cuda12.6
+- Install CUDA 12.6
   ```shell
   sh cuda_12.9.1_575.57.08_linux.run
+  # Update this filename if you use a different CUDA installer package.
   ```
 
 - Install Cusparselt
@@ -92,7 +124,9 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
 Please evaluate the model according to [Evaluation.md](docs/Evaluation.md).
 
 ## Quickstart
-Download the Pre-trained VisualEnc, LLM, LLaVAKD weights to the `./pretrained_ckpt`. And then:
+
+1. Download the pretrained vision encoder, base LLM, and LLaVA-KD weights into `./pretrained_ckpt`.
+2. Run quick inference:
   ```shell
   python quick_inference.py --model_path ./pretrained_ckpt/LLaVAKD_Model_Path --image_file ./image_test/img_test_1.jpg  --query "What is that orange thing behind the girl?"
   ```
