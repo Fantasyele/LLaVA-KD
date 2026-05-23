@@ -83,10 +83,10 @@ AVG: The average of the nine benchmarks for comprehensive comparison except MMMU
 ## LLaVA-KD Weights
 | Model                                                   | Vision Encoder                                               | LLM                                                           |  CKPTs
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------  | ------------------------------------------------------------  |
-| LLaVA-KD-1B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-0.5B](https://huggingface.co/Qwen/Qwen1.5-0.5B)     | [LLaVA-KD-Base-siglip-Qwen1.5-0.5B]()
-| LLaVA-KD-2B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen1.5-1.8B](https://huggingface.co/Qwen/Qwen1.5-1.8B)     | [LLaVA-KD-Base-siglip-Qwen1.5-1.8B]()
-| LLaVA-KD-1B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B)     | [LLaVA-KD-Base-siglip-Qwen2.5-0.5B]()
-| LLaVA-KD-2B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) |  [Qwen/Qwen2.5-1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B)     | [LLaVA-KD-Base-siglip-Qwen2.5-1.5B]()
+| LLaVA-KD-1B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) | [Qwen/Qwen1.5-0.5B](https://huggingface.co/Qwen/Qwen1.5-0.5B) | Coming soon |
+| LLaVA-KD-2B-Base-Qwen1.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) | [Qwen/Qwen1.5-1.8B](https://huggingface.co/Qwen/Qwen1.5-1.8B) | Coming soon |
+| LLaVA-KD-1B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) | [Qwen/Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B) | Coming soon |
+| LLaVA-KD-2B-Base-Qwen2.5 | [siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) | [Qwen/Qwen2.5-1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B) | Coming soon |
 
 ## :computer: Evaluation
 Please evaluate the model according to [Evaluation.md](docs/Evaluation.md).
